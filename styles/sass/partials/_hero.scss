@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-    
+
   div {
     animation: slide-left 1s ease-in-out;
     h1 {
@@ -18,30 +18,35 @@
     }
   }
   img {
-      width: 25rem;
-      padding-right: 4rem;
-      animation: slide-right 1s ease-in-out;
+    width: 25rem;
+    padding-right: 4rem;
+    animation: slide-right 1s ease-in-out;
   }
 }
 
 /*================================ MOBILE ==============================*/
-@media screen and (max-width: $Breakpoint1){
-    .hero{
-        flex-direction: column-reverse;
-        justify-content: center;
-        padding-top: 8rem;
-        padding-left: 0;
-        h1, h2{
-            text-align: center;
-        }
-        h1{
-          font-size: 4rem;
-        }
-        img{
-            width: 50%;
-            padding-left: 10%;
-            padding-right: 0;
-        }
+@media screen and (max-width: $Breakpoint1) {
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-left: 0;
+    div {
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      h2{
+        font-size: 2rem;
+      }
     }
+    img {
+      width: 50%;
+      padding-left: 10%;
+      padding-right: 0;
+    }
+  }
 }
-

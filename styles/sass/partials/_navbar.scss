@@ -31,7 +31,7 @@
     align-items: center;
     width: 500px;
     font-size: 1.25rem;
-
+    margin-right: 1rem;
     &_social {
       width: 12vw;
       display: flex;
@@ -106,7 +106,7 @@
       height: 30vh;
       justify-content: center;
       align-items: center;
-      
+      margin-right: 0;
       &_social {
           width: 80vw;
         i {

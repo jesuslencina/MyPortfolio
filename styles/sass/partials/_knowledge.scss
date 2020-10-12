@@ -36,3 +36,19 @@
         }
     }
 }
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: $Breakpoint1){
+    .knowledge{
+        h2{
+            font-size: 2rem;
+        }
+        .code-languages{
+            flex-direction: column;
+        }
+
+        .languages{
+            flex-direction: column;
+        }
+    }
+}

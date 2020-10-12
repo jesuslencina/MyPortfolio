@@ -204,6 +204,7 @@
           align-items: center;
   width: 500px;
   font-size: 1.25rem;
+  margin-right: 1rem;
 }
 
 .navbar_icons_social {
@@ -297,6 +298,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: 0;
   }
   .navbar_icons_social {
     width: 80vw;
@@ -373,11 +375,15 @@
     padding-top: 8rem;
     padding-left: 0;
   }
-  .hero h1, .hero h2 {
+  .hero div h1,
+  .hero div h2 {
     text-align: center;
   }
-  .hero h1 {
-    font-size: 4rem;
+  .hero div h1 {
+    font-size: 3rem;
+  }
+  .hero div h2 {
+    font-size: 2rem;
   }
   .hero img {
     width: 50%;
@@ -412,6 +418,35 @@
 
 .about img {
   width: 600px;
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: 800px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about div {
+    padding-left: 0;
+  }
+  .about div h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about div p {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .about div div {
+    padding-left: 0;
+    width: 100%;
+  }
+  .about img {
+    width: 100vw;
+  }
 }
 
 .knowledge {
@@ -465,4 +500,23 @@
 
 .knowledge .languages-item img {
   width: 100px;
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: 800px) {
+  .knowledge h2 {
+    font-size: 2rem;
+  }
+  .knowledge .code-languages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .knowledge .languages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
