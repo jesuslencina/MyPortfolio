@@ -1,0 +1,63 @@
+.academic {
+  font-family: $Font1;
+  background-color: $Color1;
+  color: $White;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 4rem;
+    padding-top: 4rem;
+    text-align: center;
+  }
+
+  &_div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    article {
+      padding: 1rem;
+      div {
+        display: flex;
+        h3 {
+          margin-left: 0.5rem;
+        }
+      }
+      p {
+        margin-left: 30px + 7px;
+      }
+    }
+  }
+  
+  button {
+    background-color: $White;
+    border: none;
+    color: $Color1;
+    padding: 1rem;
+    border-radius: 27px;
+    font-size: 0.8rem;
+    transition: backround-color 0.25s;
+    &:hover {
+      cursor: pointer;
+      background-color: $Color1;
+      color: $White;
+      border: 1pt solid $White;
+    }
+  }
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: $Breakpoint1) {
+  .academic {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

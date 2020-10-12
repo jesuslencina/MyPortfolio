@@ -53,11 +53,12 @@
       padding: 1rem;
       border-radius: 27px;
       font-size: 0.8rem;
-
+      transition: backround-color 0.25s;
       &:hover {
         cursor: pointer;
-        filter: brightness(2);
-        color: $Black;
+        background-color: $White;
+        color: $Color1;
+        border: 1pt solid $Color1;
       }
     }
 

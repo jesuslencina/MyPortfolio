@@ -28,6 +28,9 @@ const knowledgeES = document.querySelector(".knowledge .es");
 const knowledgeEN = document.querySelector(".knowledge .en");
 const knowledgeFR = document.querySelector(".knowledge .fr");
 
+//!ACADEMIC
+const viewCV = document.querySelector(".academic button");
+
 /**================================================================================================
  *                                         VARIABLES
  *================================================================================================**/
@@ -72,6 +75,13 @@ navMail.addEventListener("click", () => {
 
 ////SWITCH LANGUAGE
 switchLang.addEventListener("click", switchLanguage);
+
+////VIEW CV
+viewCV.addEventListener("click", () => {
+  window.open(
+    "https://www.canva.com/design/DAEKHfa9vKs/Pnj_jUHfGu_eSV3RfPH9tg/view?utm_content=DAEKHfa9vKs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+  );
+});
 
 /**================================================================================================
  *                                         FUNCTIONS

@@ -24,6 +24,7 @@
 /*================================ MOBILE ==============================*/
 @media screen and (max-width: $Breakpoint1) {
   .about {
+    margin-top: 2rem;
     flex-direction: column;
     div {
       padding-left: 0;

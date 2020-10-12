@@ -235,13 +235,15 @@
   padding: 1rem;
   border-radius: 27px;
   font-size: 0.8rem;
+  -webkit-transition: backround-color 0.25s;
+  transition: backround-color 0.25s;
 }
 
 .navbar_icons button:hover {
   cursor: pointer;
-  -webkit-filter: brightness(2);
-          filter: brightness(2);
-  color: black;
+  background-color: white;
+  color: #59beb6;
+  border: 1pt solid #59beb6;
 }
 
 .navbar_icons #switch-language {
@@ -423,6 +425,7 @@
 /*================================ MOBILE ==============================*/
 @media screen and (max-width: 800px) {
   .about {
+    margin-top: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -519,5 +522,86 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.academic {
+  font-family: "Quicksand", sans-serif;
+  background-color: #59beb6;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.academic h2 {
+  font-size: 4rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.academic_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.academic_div img {
+  width: 30px;
+  height: 30px;
+}
+
+.academic_div article {
+  padding: 1rem;
+}
+
+.academic_div article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.academic_div article div h3 {
+  margin-left: 0.5rem;
+}
+
+.academic_div article p {
+  margin-left: 37px;
+}
+
+.academic button {
+  background-color: white;
+  border: none;
+  color: #59beb6;
+  padding: 1rem;
+  border-radius: 27px;
+  font-size: 0.8rem;
+  -webkit-transition: backround-color 0.25s;
+  transition: backround-color 0.25s;
+}
+
+.academic button:hover {
+  cursor: pointer;
+  background-color: #59beb6;
+  color: white;
+  border: 1pt solid white;
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: 800px) {
+  .academic h2 {
+    font-size: 2rem;
   }
 }
