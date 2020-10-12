@@ -1,0 +1,59 @@
+.contact {
+  background-color: $Color1;
+  color: $White;
+  font-family: $Font1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  h2 {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 6rem;
+  }
+
+  div {
+    margin-top: 4rem;
+    display: flex;
+    width: 100%;
+    i {
+      color: $White;
+      font-size: 4rem;
+
+      &:hover {
+        cursor: pointer;
+        filter: saturate(50);
+      }
+    }
+  }
+
+  button {
+    margin-top: 4rem;
+    background-color: $White;
+    border: none;
+    color: $Color1;
+    padding: 1rem;
+    border-radius: 27px;
+    font-size: 2rem;
+    transition: backround-color 0.25s;
+    &:hover {
+      cursor: pointer;
+      background-color: $Color1;
+      color: $White;
+      border: 1pt solid $White;
+    }
+  }
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: $Breakpoint1){
+    .contact{
+        h2{
+            font-size: 2rem;
+        }
+
+        button{
+            font-size: 1rem;
+        }
+    }
+}
