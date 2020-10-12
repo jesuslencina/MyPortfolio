@@ -7,9 +7,13 @@
   z-index: 4;
   width: 100vw;
   height: 4rem;
-  border-bottom: 0.5pt solid $Color1;
   font-family: $Font1;
   background-color: $White;
+
+  &.scrolled{
+    border-bottom: 0.5pt solid $Color1;
+  }
+
   .title {
     margin-left: 2rem;
     color: $Color1;

@@ -1,0 +1,38 @@
+.hero {
+  padding-top: 12rem;
+  padding-left: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    h1 {
+      font-family: $Font2;
+      font-size: 4rem;
+      padding-bottom: 1rem;
+    }
+    h2 {
+      font-family: $Font1;
+    }
+  }
+  img {
+      width: 25rem;
+  }
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: $Breakpoint1){
+    .hero{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 8rem;
+        padding-left: 0;
+        h1, h2{
+            text-align: center;
+        }
+        img{
+            width: 50%;
+            padding-left: 10%;
+        }
+    }
+}
+
