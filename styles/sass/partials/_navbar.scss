@@ -1,61 +1,130 @@
-.navbar{
-    position: fixed;
-    animation: slide-down 1s ease-in-out;
+.navbar {
+  position: fixed;
+  animation: slide-down 1s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  width: 100vw;
+  height: 4rem;
+  border-bottom: 0.5pt solid $Color1;
+  font-family: $Font1;
+  background-color: $White;
+  .title {
+    margin-left: 2rem;
+    color: $Color1;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  &_icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    z-index: 4;
-    width: 100vw;
-    height: 4rem;
-    border-bottom: 0.5pt solid $Color1;
-    font-family: $Font1;
-    background-color: $White;
-    .title{
-        margin-left: 2rem;
+    width: 400px;
+    font-size: 1.25rem;
+
+    &_social {
+      width: 12vw;
+      display: flex;
+      justify-content: space-evenly;
+      i {
+        font-size: 1.75rem;
         color: $Color1;
-        font-weight: 700;
-        font-size: 1.25rem;
+        &:hover {
+          cursor: pointer;
+          filter: saturate(50);
+        }
+      }
     }
 
-    &_icons{
+    button {
+      background-color: $Color1;
+      border: none;
+      color: $White;
+      padding: 1rem;
+      border-radius: 27px;
+      font-size: 0.8rem;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(2);
+        color: $Black;
+      }
+    }
+
+    #switch-language {
+      width: 40px;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(3);
+      }
+    }
+  }
+}
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: $Breakpoint1) {
+  .navbar {
+    justify-content: center;
+    .title {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .burger-menu {
+      display: block;
+      color: $Color1;
+      font-size: 1.65rem;
+      position: absolute;
+      right: 1rem;
+
+      &.open {
+        animation: rotate180 0.5s ease-in-out forwards;
+      }
+
+      &.closed {
+        animation: rotate-180 0.5s ease-in-out forwards;
+      }
+    }
+
+    &_icons {
+      display: none;
+      position: absolute;
+      margin-top: 39vh;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $Color1;
+      width: 100vw;
+      height: 30vh;
+      justify-content: center;
+      align-items: center;
+      
+      &_social {
+          width: 80vw;
+        i {
+          color: $White;
+        }
+      }
+
+      button{
+          background-color: $White;
+          color: $Color1;
+          margin: 1rem;
+      }
+
+      &.open {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 400px;
-        font-size: 1.25rem;
+        animation: slide-down 0.8s ease-in-out;
+      }
 
-        
-        i{
-            color: $Color1;
-
-            &:hover{
-                cursor: pointer;
-                filter: saturate(50);
-            }
-        }
-
-        button{
-            background-color: $Color1;
-            border: none;
-            color: $White;
-            padding: 1rem;
-            border-radius: 27px;
-            font-size: 0.8rem;
-
-            &:hover{
-                cursor: pointer;
-                filter: brightness(2);
-                color: $Black;
-            }
-        }
-
-        #switch-language{
-            width: 40px;
-
-            &:hover{
-                cursor: pointer;
-                filter: brightness(3);
-            }
-        }
+      &.closed {
+        animation: slide-up 0.8s ease-in-out;
+        display: none;
+      }
     }
+  }
 }

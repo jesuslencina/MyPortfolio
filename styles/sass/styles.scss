@@ -16,6 +16,8 @@ $Color2: #fdea6b;
 
 $Font1: 'Quicksand', sans-serif;
 $Font2: 'Sansita Swashed', cursive;
+
+$Breakpoint1: 800px;
 /*================================ ANIMATIONS ==============================*/
 @keyframes slide-right {
   0% {
@@ -58,6 +60,26 @@ $Font2: 'Sansita Swashed', cursive;
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+}
+
+@keyframes rotate180{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes rotate-180{
+    0%{
+        transform: rotate(-180deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
     }
 }
 /*================================ PARTIALS ==============================*/
