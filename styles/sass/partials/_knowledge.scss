@@ -1,0 +1,38 @@
+.knowledge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $Font1;
+    text-align: center;
+    h2{
+        font-size: 4rem;
+        color: $Color1;
+    }
+
+    h3{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .code-languages{
+        display: flex;
+
+        &-item{
+            padding: 2rem;
+            img{
+                width:100px;
+            }
+        }
+    }
+
+    .languages{
+        display: flex;
+
+        &-item{
+            padding: 2rem;
+            img{
+                width:100px;
+            }
+        }
+    }
+}

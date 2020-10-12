@@ -4,7 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+    
   div {
+    animation: slide-left 1s ease-in-out;
     h1 {
       font-family: $Font2;
       font-size: 4rem;
@@ -16,6 +18,8 @@
   }
   img {
       width: 25rem;
+      padding-right: 4rem;
+      animation: slide-right 1s ease-in-out;
   }
 }
 
@@ -32,6 +36,7 @@
         img{
             width: 50%;
             padding-left: 10%;
+            padding-right: 0;
         }
     }
 }
