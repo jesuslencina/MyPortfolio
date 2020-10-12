@@ -541,6 +541,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 2rem;
 }
 
 .academic h2 {
@@ -605,5 +606,80 @@
 @media screen and (max-width: 800px) {
   .academic h2 {
     font-size: 2rem;
+  }
+}
+
+.projects {
+  font-family: "Quicksand", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects h2 {
+  padding-top: 4rem;
+  font-size: 4rem;
+  color: #59beb6;
+}
+
+.projects div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects div article {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects div article img {
+  width: 400px;
+  height: auto;
+  -webkit-box-shadow: 2px 2px 19px 6px rgba(110, 110, 110, 0.65);
+          box-shadow: 2px 2px 19px 6px rgba(110, 110, 110, 0.65);
+}
+
+.projects div article img:hover {
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
+  cursor: pointer;
+}
+
+.projects div article a {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: #59beb6;
+}
+
+/*================================ MOBILE ==============================*/
+@media screen and (max-width: 800px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+  .projects div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects div article img {
+    width: 300px;
   }
 }

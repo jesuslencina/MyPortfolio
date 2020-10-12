@@ -32,6 +32,10 @@ const knowledgeFR = document.querySelector(".knowledge .fr");
 //!ACADEMIC
 const viewCV = document.querySelector(".academic button");
 
+//!PROJECTS
+const podcast = document.getElementById("podcast-channel");
+const gifos = document.getElementById("gifos");
+
 /**================================================================================================
  *                                         VARIABLES
  *================================================================================================**/
@@ -85,13 +89,22 @@ viewCV.addEventListener("click", () => {
 });
 
 ////SCROLL EFFECT
-window.onscroll = function scroll () {
-if (document.documentElement.scrollTop > 200) {
-  nav.classList.add("scrolled");
-} else {
-  nav.classList.remove("scrolled");
-}
-}
+window.onscroll = function scroll() {
+  if (document.documentElement.scrollTop > 200) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+};
+
+////VIEW PROJECTS
+podcast.addEventListener("click", () => {
+  window.open("https://podcast-channel-jesus.netlify.app/");
+});
+
+gifos.addEventListener("click", () => {
+  window.open("https://github.com/jesuslencina/GIFOS-2/");
+});
 
 /**================================================================================================
  *                                         FUNCTIONS
