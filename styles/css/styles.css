@@ -202,7 +202,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 400px;
+  width: 500px;
   font-size: 1.25rem;
 }
 
@@ -344,12 +344,13 @@
 
 .hero div h1 {
   font-family: "Sansita Swashed", cursive;
-  font-size: 4rem;
+  font-size: 6rem;
   padding-bottom: 1rem;
 }
 
 .hero div h2 {
   font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
 }
 
 .hero img {
@@ -374,6 +375,9 @@
   }
   .hero h1, .hero h2 {
     text-align: center;
+  }
+  .hero h1 {
+    font-size: 4rem;
   }
   .hero img {
     width: 50%;

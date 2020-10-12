@@ -9,11 +9,12 @@
     animation: slide-left 1s ease-in-out;
     h1 {
       font-family: $Font2;
-      font-size: 4rem;
+      font-size: 6rem;
       padding-bottom: 1rem;
     }
     h2 {
       font-family: $Font1;
+      font-size: 2rem;
     }
   }
   img {
@@ -32,6 +33,9 @@
         padding-left: 0;
         h1, h2{
             text-align: center;
+        }
+        h1{
+          font-size: 4rem;
         }
         img{
             width: 50%;

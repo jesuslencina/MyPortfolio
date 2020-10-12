@@ -1,5 +1,5 @@
 Font Awesome
-ibrush design
+blush.design
 icon scout
 countryflags.com
 <a href="https://iconscout.com/icons/javascript" target="_blank">Javascript Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
