@@ -283,7 +283,7 @@
   .navbar_icons {
     display: none;
     position: absolute;
-    margin-top: 39vh;
+    top: 4rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -465,6 +465,7 @@
 }
 
 .knowledge h2 {
+  padding-top: 4rem;
   font-size: 4rem;
   color: #59beb6;
 }
