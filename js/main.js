@@ -31,10 +31,22 @@ const knowledgeFR = document.querySelector(".knowledge .fr");
 
 //!ACADEMIC
 const viewCV = document.querySelector(".academic button");
+const academicH2 = document.querySelector(".academic h2");
+const acamica = document.getElementById("acamica");
+const unc = document.getElementById("unc");
 
 //!PROJECTS
 const podcast = document.getElementById("podcast-channel");
 const gifos = document.getElementById("gifos");
+const projectsH2 = document.querySelector(".projects h2");
+
+//!CONTACT
+const Facebook = document.querySelector(".contact .fa-facebook");
+const Linkedin = document.querySelector(".contact .fa-linkedin");
+const Github = document.querySelector(".contact .fa-github");
+const Mail = document.querySelector(".contact button");
+const contactH2 = document.querySelector(".contact h2");
+const contactButton = document.querySelector(".contact button");
 
 /**================================================================================================
  *                                         VARIABLES
@@ -75,6 +87,23 @@ navGithub.addEventListener("click", () => {
 });
 
 navMail.addEventListener("click", () => {
+  window.open("mailto:jesusignaciolencina@gmail.com");
+});
+
+////CONTACT LINKS
+Facebook.addEventListener("click", () => {
+  window.open("https://www.facebook.com/jesuslencina55/");
+});
+
+Linkedin.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/jesuslencina/");
+});
+
+Github.addEventListener("click", () => {
+  window.open("https://github.com/jesuslencina");
+});
+
+Mail.addEventListener("click", () => {
   window.open("mailto:jesusignaciolencina@gmail.com");
 });
 
@@ -136,6 +165,17 @@ function switchLanguage() {
     knowledgeEN.querySelector("h5").innerHTML = "(Advanced - C2)";
     knowledgeFR.querySelector("h4").innerHTML = "French";
     knowledgeFR.querySelector("h5").innerHTML = "(Intermediate)";
+    //!ACADEMIC
+    academicH2.innerHTML = "ACADEMIC HISTORY";
+    acamica.querySelector("p").innerHTML = "Front-End Web Development - 2020";
+    unc.querySelector("h3").innerHTML = "NATIONAL UNIVERSITY OF CORDOBA";
+    unc.querySelector("p").innerHTML = "English Translation Degree - 2019";
+    viewCV.innerHTML = "VIEW MORE IN MY CV";
+    //!PROJECTS
+    projectsH2.innerHTML = "PROJECTS";
+    //!CONTACT
+    contactH2.innerHTML = "WANNA SEND A MESSAGE?";
+    contactButton.innerHTML = "SEND ME AN E-MAIL";
   } else {
     switchLang.src = "assets/usa.png";
     inEnglish = false;
@@ -160,5 +200,17 @@ function switchLanguage() {
     knowledgeEN.querySelector("h5").innerHTML = "(Avanzado - C2)";
     knowledgeFR.querySelector("h4").innerHTML = "Francés";
     knowledgeFR.querySelector("h5").innerHTML = "(Intermedio)";
+    //!ACADEMIC
+    academicH2.innerHTML = "HISTORIA ACADÉMICA";
+    acamica.querySelector("p").innerHTML = "Desarrollo Web Front-End - 2020";
+    unc.querySelector("h3").innerHTML = "UNIVERSIDAD NACIONAL DE CÓRDOBA";
+    unc.querySelector("p").innerHTML =
+      "Traductorado Público Nacional de Inglés - 2019";
+    viewCV.innerHTML = "VER MÁS EN MI CV";
+    //!PROJECTS
+    projectsH2.innerHTML = "PROYECTOS";
+    //!CONTACT
+    contactH2.innerHTML = "¿ME ENVIAS UN MENSAJE?";
+    contactButton.innerHTML = "ENVIAME UN MAIL";
   }
 }
