@@ -179,6 +179,8 @@
 
 .navbar.scrolled {
   border-bottom: 0.5pt solid #59beb6;
+  -webkit-box-shadow: -2px 2px 5px 2px rgba(110, 110, 110, 0.65);
+          box-shadow: -2px 2px 5px 2px rgba(110, 110, 110, 0.65);
 }
 
 .navbar .title {

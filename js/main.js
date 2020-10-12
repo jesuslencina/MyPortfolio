@@ -3,6 +3,7 @@
  *================================================================================================**/
 
 //! NAVBAR
+const nav = document.querySelector(".navbar");
 const burger = document.querySelector(".burger-menu");
 const navList = document.querySelector(".navbar_icons");
 const navTitle = document.querySelector(".navbar .title");
@@ -82,6 +83,15 @@ viewCV.addEventListener("click", () => {
     "https://www.canva.com/design/DAEKHfa9vKs/Pnj_jUHfGu_eSV3RfPH9tg/view?utm_content=DAEKHfa9vKs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
   );
 });
+
+////SCROLL EFFECT
+window.onscroll = function scroll () {
+if (document.documentElement.scrollTop > 200) {
+  nav.classList.add("scrolled");
+} else {
+  nav.classList.remove("scrolled");
+}
+}
 
 /**================================================================================================
  *                                         FUNCTIONS
