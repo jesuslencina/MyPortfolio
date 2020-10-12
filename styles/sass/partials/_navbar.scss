@@ -1,0 +1,61 @@
+.navbar{
+    position: fixed;
+    animation: slide-down 1s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    width: 100vw;
+    height: 4rem;
+    border-bottom: 0.5pt solid $Color1;
+    font-family: $Font1;
+    background-color: $White;
+    .title{
+        margin-left: 2rem;
+        color: $Color1;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    &_icons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 400px;
+        font-size: 1.25rem;
+
+        
+        i{
+            color: $Color1;
+
+            &:hover{
+                cursor: pointer;
+                filter: saturate(50);
+            }
+        }
+
+        button{
+            background-color: $Color1;
+            border: none;
+            color: $White;
+            padding: 1rem;
+            border-radius: 27px;
+            font-size: 0.8rem;
+
+            &:hover{
+                cursor: pointer;
+                filter: brightness(2);
+                color: $Black;
+            }
+        }
+
+        #switch-language{
+            width: 40px;
+
+            &:hover{
+                cursor: pointer;
+                filter: brightness(3);
+            }
+        }
+    }
+}

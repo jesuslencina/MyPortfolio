@@ -1,0 +1,192 @@
+/**========================================================================
+ *                           MAIN SCSS FILE
+ *========================================================================**/
+/*================================ NORMALIZER ==============================*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*================================ VARIABLES ==============================*/
+/*================================ ANIMATIONS ==============================*/
+@-webkit-keyframes slide-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*================================ PARTIALS ==============================*/
+.navbar {
+  position: fixed;
+  -webkit-animation: slide-down 1s ease-in-out;
+          animation: slide-down 1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 4;
+  width: 100vw;
+  height: 4rem;
+  border-bottom: 0.5pt solid #59beb6;
+  font-family: "Quicksand", sans-serif;
+  background-color: white;
+}
+
+.navbar .title {
+  margin-left: 2rem;
+  color: #59beb6;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  font-size: 1.25rem;
+}
+
+.navbar_icons i {
+  color: #59beb6;
+}
+
+.navbar_icons i:hover {
+  cursor: pointer;
+  -webkit-filter: saturate(50);
+          filter: saturate(50);
+}
+
+.navbar_icons button {
+  background-color: #59beb6;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 27px;
+  font-size: 0.8rem;
+}
+
+.navbar_icons button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
+  color: black;
+}
+
+.navbar_icons #switch-language {
+  width: 40px;
+}
+
+.navbar_icons #switch-language:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(3);
+          filter: brightness(3);
+}

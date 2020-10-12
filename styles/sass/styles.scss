@@ -1,0 +1,64 @@
+/**========================================================================
+ *                           MAIN SCSS FILE
+ *========================================================================**/
+
+/*================================ NORMALIZER ==============================*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*================================ VARIABLES ==============================*/
+$White: white;
+$Black: black;
+$Color1: #59beb6;
+$Color2: #fdea6b;
+
+$Font1: 'Quicksand', sans-serif;
+$Font2: 'Sansita Swashed', cursive;
+/*================================ ANIMATIONS ==============================*/
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+/*================================ PARTIALS ==============================*/
+@import 'partials/navbar';
