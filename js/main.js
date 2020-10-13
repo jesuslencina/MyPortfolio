@@ -154,7 +154,7 @@ function switchLanguage() {
     //!ABOUT
     aboutH2.innerHTML = "ABOUT ME";
     aboutP.innerHTML =
-      "I'm 19 years old, and I live in Córdoba, Argentina. I'm passionate about web design, as well as learning languages and taking photographs. I also like taking care of my over 10 pets.";
+      "I'm 19 years old, and I live in Córdoba, Argentina. I'm passionate about web design, as well as learning languages and taking photographs. I also like taking care of my pets.";
     //!KNOWLEDGE
     knowledgeH2.innerHTML = "KNOWLEDGE";
     knowledgeH3a.innerHTML = "Coding:";
@@ -189,7 +189,7 @@ function switchLanguage() {
     //!ABOUT
     aboutH2.innerHTML = "SOBRE MÍ";
     aboutP.innerHTML = `Vivo en Córdoba Capital, Argentina, tengo 19 años y me apasiona el diseño web, como también los idiomas y
-    la fotografía. También me dedico a cuidar a mis más de 10 mascotas.`;
+    la fotografía. También me dedico a cuidar a mis mascotas.`;
     //!KNOWLEDGE
     knowledgeH2.innerHTML = "CONOCIMIENTOS";
     knowledgeH3a.innerHTML = "Del sector:";
