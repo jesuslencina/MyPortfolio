@@ -189,7 +189,7 @@ function switchLanguage() {
     //!ABOUT
     aboutH2.innerHTML = "SOBRE MÍ";
     aboutP.innerHTML = `Vivo en Córdoba Capital, Argentina, tengo 19 años y me apasiona el diseño web, como también los idiomas y
-    la fotografía. También me dedico a cuidar a mis mascotas.`;
+    la fotografía. Además, me dedico a cuidar a mis mascotas.`;
     //!KNOWLEDGE
     knowledgeH2.innerHTML = "CONOCIMIENTOS";
     knowledgeH3a.innerHTML = "Del sector:";
