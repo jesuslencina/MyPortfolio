@@ -67,7 +67,7 @@
       width: 40px;
       &:hover {
         cursor: pointer;
-        filter: brightness(3);
+        filter: saturate(5);
       }
     }
   }

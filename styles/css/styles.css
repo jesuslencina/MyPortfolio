@@ -254,8 +254,8 @@
 
 .navbar_icons #switch-language:hover {
   cursor: pointer;
-  -webkit-filter: brightness(3);
-          filter: brightness(3);
+  -webkit-filter: saturate(5);
+          filter: saturate(5);
 }
 
 /*================================ MOBILE ==============================*/
@@ -541,7 +541,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .academic h2 {
@@ -678,6 +678,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .projects div article {
+    padding: initial 0;
   }
   .projects div article img {
     width: 300px;

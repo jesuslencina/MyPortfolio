@@ -52,7 +52,7 @@ const contactButton = document.querySelector(".contact button");
  *                                         VARIABLES
  *================================================================================================**/
 var burgerOpen = false;
-var inEnglish = false;
+var language = "ES";
 /**================================================================================================
  *                                         LISTENERS
  *================================================================================================**/
@@ -112,9 +112,30 @@ switchLang.addEventListener("click", switchLanguage);
 
 ////VIEW CV
 viewCV.addEventListener("click", () => {
-  window.open(
-    "https://www.canva.com/design/DAEKHfa9vKs/Pnj_jUHfGu_eSV3RfPH9tg/view?utm_content=DAEKHfa9vKs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
-  );
+
+  switch (language) {
+    case "ES":
+      window.open(
+        "https://www.canva.com/design/DAEKHfa9vKs/Pnj_jUHfGu_eSV3RfPH9tg/view?utm_content=DAEKHfa9vKs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+      );
+      break;
+    case "EN":
+      window.open(
+       "https://www.canva.com/design/DAEKIa0IjJk/WiyWsFUffwGBSlxN5PdJbw/view?utm_content=DAEKIa0IjJk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+      );
+      break;
+    case "FR":
+      window.open(
+        "https://www.canva.com/design/DAEKcibQA5I/1RwiSZTicch780kFdWfFpQ/view?utm_content=DAEKcibQA5I&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+       );
+      break;
+    default:
+      window.open(
+        "https://www.canva.com/design/DAEKHfa9vKs/Pnj_jUHfGu_eSV3RfPH9tg/view?utm_content=DAEKHfa9vKs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+      );
+      break;
+  }
+  
 });
 
 ////SCROLL EFFECT
@@ -140,77 +161,122 @@ gifos.addEventListener("click", () => {
  *================================================================================================**/
 
 function switchLanguage() {
-  //IF
-  if (inEnglish == false) {
-    switchLang.src = "assets/argentina.png";
-    inEnglish = true;
-    //CHANGE TEXTS
-    //!NAV
-    navTitle.innerHTML = "Jesus Lencina";
-    navMail.innerHTML = "SEND ME AN E-MAIL";
-    //!HERO
-    heroH1.innerHTML = "Jesus Lencina";
-    heroH2.innerHTML = "Front-End Web Developer";
-    //!ABOUT
-    aboutH2.innerHTML = "ABOUT ME";
-    aboutP.innerHTML =
-      "I'm 19 years old, and I live in Córdoba, Argentina. I'm passionate about web design, as well as learning languages and taking photographs. I also like taking care of my pets.";
-    //!KNOWLEDGE
-    knowledgeH2.innerHTML = "KNOWLEDGE";
-    knowledgeH3a.innerHTML = "Coding:";
-    knowledgeH3b.innerHTML = "Languages:";
-    knowledgeES.querySelector("h4").innerHTML = "Spanish";
-    knowledgeES.querySelector("h5").innerHTML = "(Native)";
-    knowledgeEN.querySelector("h4").innerHTML = "English";
-    knowledgeEN.querySelector("h5").innerHTML = "(Advanced - C2)";
-    knowledgeFR.querySelector("h4").innerHTML = "French";
-    knowledgeFR.querySelector("h5").innerHTML = "(Intermediate)";
-    //!ACADEMIC
-    academicH2.innerHTML = "ACADEMIC HISTORY";
-    acamica.querySelector("p").innerHTML = "Front-End Web Development - 2020";
-    unc.querySelector("h3").innerHTML = "NATIONAL UNIVERSITY OF CORDOBA";
-    unc.querySelector("p").innerHTML = "English Translation Degree - 2019";
-    viewCV.innerHTML = "VIEW MORE IN MY CV";
-    //!PROJECTS
-    projectsH2.innerHTML = "PROJECTS";
-    //!CONTACT
-    contactH2.innerHTML = "WANNA SEND A MESSAGE?";
-    contactButton.innerHTML = "SEND ME AN E-MAIL";
-  } else {
-    switchLang.src = "assets/usa.png";
-    inEnglish = false;
-    //CHANGE TEXTS
-    //!NAV
-    navTitle.innerHTML = "Jesús Lencina";
-    navMail.innerHTML = "MANDAME UN MAIL";
-    //!HERO
-    heroH1.innerHTML = "Jesús Lencina";
-    heroH2.innerHTML = "Desarrollador Web Front-End";
-    //!ABOUT
-    aboutH2.innerHTML = "SOBRE MÍ";
-    aboutP.innerHTML = `Vivo en Córdoba Capital, Argentina, tengo 19 años y me apasiona el diseño web, como también los idiomas y
+  switch (language) {
+    case "ES": //The website is in Spanish, and will be switched to ENGLISH
+      //*SWITCH TO ENGLISH
+      switchLang.src = "assets/france-flag-round-small.png"; //Display icon for FRENCH (next one)
+      language = "EN";
+      //CHANGE TEXTS
+      //!NAV
+      navTitle.innerHTML = "Jesus Lencina";
+      navMail.innerHTML = "SEND ME AN E-MAIL";
+      //!HERO
+      heroH1.innerHTML = "Jesus Lencina";
+      heroH2.innerHTML = "Front-End Web Developer";
+      //!ABOUT
+      aboutH2.innerHTML = "ABOUT ME";
+      aboutP.innerHTML =
+        "I'm 19 years old, and I live in Córdoba, Argentina. I'm passionate about web design, as well as learning languages and taking photographs. I also like taking care of my pets.";
+      //!KNOWLEDGE
+      knowledgeH2.innerHTML = "KNOWLEDGE";
+      knowledgeH3a.innerHTML = "Coding:";
+      knowledgeH3b.innerHTML = "Languages:";
+      knowledgeES.querySelector("h4").innerHTML = "Spanish";
+      knowledgeES.querySelector("h5").innerHTML = "(Native)";
+      knowledgeEN.querySelector("h4").innerHTML = "English";
+      knowledgeEN.querySelector("h5").innerHTML = "(Advanced - C2)";
+      knowledgeFR.querySelector("h4").innerHTML = "French";
+      knowledgeFR.querySelector("h5").innerHTML = "(Intermediate)";
+      //!ACADEMIC
+      academicH2.innerHTML = "ACADEMIC HISTORY";
+      acamica.querySelector("p").innerHTML = "Front-End Web Development - 2020";
+      unc.querySelector("h3").innerHTML = "NATIONAL UNIVERSITY OF CORDOBA";
+      unc.querySelector("p").innerHTML = "English Translation Degree - 2019";
+      viewCV.innerHTML = "VIEW MORE IN MY CV";
+      //!PROJECTS
+      projectsH2.innerHTML = "PROJECTS";
+      //!CONTACT
+      contactH2.innerHTML = "WANNA SEND A MESSAGE?";
+      contactButton.innerHTML = "SEND ME AN E-MAIL";
+      break;
+
+    case "EN": //The website is in ENGLISH and will be switched to FRENCH
+      //*SWITCH TO FRENCH
+      switchLang.src = "assets/argentina-flag-round-small.png"; //Display icon for SPANISH (next one)
+      language = "FR";
+      //CHANGE TEXTS
+      //!NAV
+      navTitle.innerHTML = "Jésus Lencina";
+      navMail.innerHTML = "ENVOYER UN E-MAIL";
+      //!HERO
+      heroH1.innerHTML = "Jésus Lencina";
+      heroH2.innerHTML = "Développeur Web Front-End";
+      //!ABOUT
+      aboutH2.innerHTML = "À PROPOS DE MOI";
+      aboutP.innerHTML =
+        "J'ai 19 ans, et j'habite à Córdoba, Argentina. J'adore le développement web, et j'aime apprendre de nouvelles langues. Je fais de la photographie, aussi. Prendre soin de mes animaux c'est bon pour moi.";
+      //!KNOWLEDGE
+      knowledgeH2.innerHTML = "OUTILS";
+      knowledgeH3a.innerHTML = "Du secteur:";
+      knowledgeH3b.innerHTML = "Langues:";
+      knowledgeES.querySelector("h4").innerHTML = "Espagnol";
+      knowledgeES.querySelector("h5").innerHTML = "(Langue maternelle)";
+      knowledgeEN.querySelector("h4").innerHTML = "Anglais";
+      knowledgeEN.querySelector("h5").innerHTML = "(Avancée - C2)";
+      knowledgeFR.querySelector("h4").innerHTML = "Français";
+      knowledgeFR.querySelector("h5").innerHTML = "(Intermédiaire)";
+      //!ACADEMIC
+      academicH2.innerHTML = "ÉDUCATION";
+      acamica.querySelector("p").innerHTML = "Développement Web Front-End - 2020";
+      unc.querySelector("h3").innerHTML = "UNIVERSITÉ NATIONALE DE CORDOBA";
+      unc.querySelector("p").innerHTML = "Traductorat d'Anglais - 2019";
+      viewCV.innerHTML = "VOIR PLUS DANS MON CV";
+      //!PROJECTS
+      projectsH2.innerHTML = "PROJECTS";
+      //!CONTACT
+      contactH2.innerHTML = "M'ENVOYER UN MESSAGE?";
+      contactButton.innerHTML = "ENVOYER UN E-MAIL";
+      break;
+
+    default:
+      //The website is in FRENCH and will be switched to SPANISH
+      //*SWITCH TO SPANISH
+      switchLang.src = "assets/united-states-of-america-flag-round-small.png";
+      language = "ES";
+      //CHANGE TEXTS
+      //!NAV
+      navTitle.innerHTML = "Jesús Lencina";
+      navMail.innerHTML = "MANDAME UN MAIL";
+      //!HERO
+      heroH1.innerHTML = "Jesús Lencina";
+      heroH2.innerHTML = "Desarrollador Web Front-End";
+      //!ABOUT
+      aboutH2.innerHTML = "SOBRE MÍ";
+      aboutP.innerHTML = `Vivo en Córdoba Capital, Argentina, tengo 19 años y me apasiona el diseño web, como también los idiomas y
     la fotografía. Además, me dedico a cuidar a mis mascotas.`;
-    //!KNOWLEDGE
-    knowledgeH2.innerHTML = "CONOCIMIENTOS";
-    knowledgeH3a.innerHTML = "Del sector:";
-    knowledgeH3b.innerHTML = "Idiomas:";
-    knowledgeES.querySelector("h4").innerHTML = "Español";
-    knowledgeES.querySelector("h5").innerHTML = "(Nativo)";
-    knowledgeEN.querySelector("h4").innerHTML = "Inglés";
-    knowledgeEN.querySelector("h5").innerHTML = "(Avanzado - C2)";
-    knowledgeFR.querySelector("h4").innerHTML = "Francés";
-    knowledgeFR.querySelector("h5").innerHTML = "(Intermedio)";
-    //!ACADEMIC
-    academicH2.innerHTML = "HISTORIA ACADÉMICA";
-    acamica.querySelector("p").innerHTML = "Desarrollo Web Front-End - 2020";
-    unc.querySelector("h3").innerHTML = "UNIVERSIDAD NACIONAL DE CÓRDOBA";
-    unc.querySelector("p").innerHTML =
-      "Traductorado Público Nacional de Inglés - 2019";
-    viewCV.innerHTML = "VER MÁS EN MI CV";
-    //!PROJECTS
-    projectsH2.innerHTML = "PROYECTOS";
-    //!CONTACT
-    contactH2.innerHTML = "¿ME ENVIAS UN MENSAJE?";
-    contactButton.innerHTML = "ENVIAME UN MAIL";
+      //!KNOWLEDGE
+      knowledgeH2.innerHTML = "CONOCIMIENTOS";
+      knowledgeH3a.innerHTML = "Del sector:";
+      knowledgeH3b.innerHTML = "Idiomas:";
+      knowledgeES.querySelector("h4").innerHTML = "Español";
+      knowledgeES.querySelector("h5").innerHTML = "(Nativo)";
+      knowledgeEN.querySelector("h4").innerHTML = "Inglés";
+      knowledgeEN.querySelector("h5").innerHTML = "(Avanzado - C2)";
+      knowledgeFR.querySelector("h4").innerHTML = "Francés";
+      knowledgeFR.querySelector("h5").innerHTML = "(Intermedio)";
+      //!ACADEMIC
+      academicH2.innerHTML = "HISTORIA ACADÉMICA";
+      acamica.querySelector("p").innerHTML = "Desarrollo Web Front-End - 2020";
+      unc.querySelector("h3").innerHTML = "UNIVERSIDAD NACIONAL DE CÓRDOBA";
+      unc.querySelector("p").innerHTML =
+        "Traductorado Público Nacional de Inglés - 2019";
+      viewCV.innerHTML = "VER MÁS EN MI CV";
+      //!PROJECTS
+      projectsH2.innerHTML = "PROYECTOS";
+      //!CONTACT
+      contactH2.innerHTML = "¿ME ENVÍAS UN MENSAJE?";
+      contactButton.innerHTML = "ENVIAME UN MAIL";
+
+      break;
   }
 }
