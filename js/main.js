@@ -153,7 +153,7 @@ podcast.addEventListener("click", () => {
 });
 
 gifos.addEventListener("click", () => {
-  window.open("https://github.com/jesuslencina/GIFOS-2/");
+  window.open("https://gifos-jesus.netlify.app/");
 });
 
 /**================================================================================================
