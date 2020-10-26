@@ -218,7 +218,7 @@ function switchLanguage() {
       //!PROJECTS
       projectsH2.innerHTML = "PROJECTS";
       //!CONTACT
-      contactH2.innerHTML = "WANNA SEND A MESSAGE?";
+      contactH2.innerHTML = "WANNA LEAVE A MESSAGE?";
       contactButton.innerHTML = "SEND ME AN E-MAIL";
       break;
 
