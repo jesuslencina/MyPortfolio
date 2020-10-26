@@ -231,6 +231,7 @@
 }
 
 .navbar_icons button {
+  width: 15rem;
   background-color: #59beb6;
   border: none;
   color: white;
@@ -248,11 +249,21 @@
   border: 1pt solid #59beb6;
 }
 
-.navbar_icons #switch-language {
-  width: 40px;
+.navbar_icons .lang-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.navbar_icons #switch-language:hover {
+.navbar_icons .lang-selection .switch-language {
+  width: 35px;
+  padding: 0 0.5rem;
+}
+
+.navbar_icons .lang-selection .switch-language:hover {
   cursor: pointer;
   -webkit-filter: saturate(5);
           filter: saturate(5);
@@ -406,6 +417,7 @@
 }
 
 .about div {
+  width: 60%;
   font-family: "Quicksand", sans-serif;
   color: white;
   padding-left: 4rem;
@@ -417,11 +429,11 @@
 }
 
 .about div p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .about img {
-  width: 600px;
+  width: 40%;
 }
 
 /*================================ MOBILE ==============================*/
@@ -434,6 +446,7 @@
             flex-direction: column;
   }
   .about div {
+    width: 100%;
     padding-left: 0;
   }
   .about div h2 {
@@ -680,7 +693,7 @@
             flex-direction: column;
   }
   .projects div article {
-    padding: initial 0;
+    padding: 0.75rem 0;
   }
   .projects div article img {
     width: 300px;

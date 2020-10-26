@@ -11,7 +11,9 @@ const navFacebook = document.querySelector(".navbar .fa-facebook");
 const navLinkedin = document.querySelector(".navbar .fa-linkedin");
 const navGithub = document.querySelector(".navbar .fa-github");
 const navMail = document.querySelector(".navbar button");
-const switchLang = document.getElementById("switch-language");
+const switchLangESP = document.querySelector(".navbar .esp");
+const switchLangENG = document.querySelector(".navbar .eng");
+const switchLangFRA = document.querySelector(".navbar .fra");
 
 //!HERO
 const heroH1 = document.querySelector(".hero h1");
@@ -59,19 +61,27 @@ var language = "ES";
 ////BURGER MENU
 burger.addEventListener("click", () => {
   if (burgerOpen == false) {
-    burger.classList.add("open");
-    burger.classList.remove("closed");
-    navList.classList.add("open");
-    navList.classList.remove("closed");
-    burgerOpen = true;
+    openBurger();
   } else {
-    burger.classList.add("closed");
-    burger.classList.remove("open");
-    navList.classList.add("closed");
-    navList.classList.remove("open");
-    burgerOpen = false;
+    closeBurger();
   }
 });
+
+function openBurger() {
+  burger.classList.add("open");
+  burger.classList.remove("closed");
+  navList.classList.add("open");
+  navList.classList.remove("closed");
+  burgerOpen = true;
+}
+
+function closeBurger() {
+  burger.classList.add("closed");
+  burger.classList.remove("open");
+  navList.classList.add("closed");
+  navList.classList.remove("open");
+  burgerOpen = false;
+}
 
 ////NAV LINKS
 navFacebook.addEventListener("click", () => {
@@ -108,11 +118,26 @@ Mail.addEventListener("click", () => {
 });
 
 ////SWITCH LANGUAGE
-switchLang.addEventListener("click", switchLanguage);
+switchLangESP.addEventListener("click", () => {
+  language = "ES";
+  switchLanguage();
+  closeBurger();
+});
+
+switchLangENG.addEventListener("click", () => {
+  language = "EN";
+  switchLanguage();
+  closeBurger();
+});
+
+switchLangFRA.addEventListener("click", () => {
+  language = "FR";
+  switchLanguage();
+  closeBurger();
+});
 
 ////VIEW CV
 viewCV.addEventListener("click", () => {
-
   switch (language) {
     case "ES":
       window.open(
@@ -121,13 +146,13 @@ viewCV.addEventListener("click", () => {
       break;
     case "EN":
       window.open(
-       "https://www.canva.com/design/DAEKIa0IjJk/WiyWsFUffwGBSlxN5PdJbw/view?utm_content=DAEKIa0IjJk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+        "https://www.canva.com/design/DAEKIa0IjJk/WiyWsFUffwGBSlxN5PdJbw/view?utm_content=DAEKIa0IjJk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
       );
       break;
     case "FR":
       window.open(
         "https://www.canva.com/design/DAEKcibQA5I/1RwiSZTicch780kFdWfFpQ/view?utm_content=DAEKcibQA5I&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
-       );
+      );
       break;
     default:
       window.open(
@@ -135,7 +160,6 @@ viewCV.addEventListener("click", () => {
       );
       break;
   }
-  
 });
 
 ////SCROLL EFFECT
@@ -162,10 +186,8 @@ gifos.addEventListener("click", () => {
 
 function switchLanguage() {
   switch (language) {
-    case "ES": //The website is in Spanish, and will be switched to ENGLISH
+    case "EN":
       //*SWITCH TO ENGLISH
-      switchLang.src = "assets/france-flag-round-small.png"; //Display icon for FRENCH (next one)
-      language = "EN";
       //CHANGE TEXTS
       //!NAV
       navTitle.innerHTML = "Jesus Lencina";
@@ -200,10 +222,8 @@ function switchLanguage() {
       contactButton.innerHTML = "SEND ME AN E-MAIL";
       break;
 
-    case "EN": //The website is in ENGLISH and will be switched to FRENCH
+    case "FR":
       //*SWITCH TO FRENCH
-      switchLang.src = "assets/argentina-flag-round-small.png"; //Display icon for SPANISH (next one)
-      language = "FR";
       //CHANGE TEXTS
       //!NAV
       navTitle.innerHTML = "Jésus Lencina";
@@ -227,7 +247,8 @@ function switchLanguage() {
       knowledgeFR.querySelector("h5").innerHTML = "(Intermédiaire)";
       //!ACADEMIC
       academicH2.innerHTML = "ÉDUCATION";
-      acamica.querySelector("p").innerHTML = "Développement Web Front-End - 2020";
+      acamica.querySelector("p").innerHTML =
+        "Développement Web Front-End - 2020";
       unc.querySelector("h3").innerHTML = "UNIVERSITÉ NATIONALE DE CORDOBA";
       unc.querySelector("p").innerHTML = "Traductorat d'Anglais - 2019";
       viewCV.innerHTML = "VOIR PLUS DANS MON CV";
@@ -239,10 +260,7 @@ function switchLanguage() {
       break;
 
     default:
-      //The website is in FRENCH and will be switched to SPANISH
       //*SWITCH TO SPANISH
-      switchLang.src = "assets/united-states-of-america-flag-round-small.png";
-      language = "ES";
       //CHANGE TEXTS
       //!NAV
       navTitle.innerHTML = "Jesús Lencina";
